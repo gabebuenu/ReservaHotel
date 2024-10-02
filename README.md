@@ -24,3 +24,10 @@ O projeto inicializa automaticamente dados de exemplo para hóspedes e quartos a
 * Execute o projeto.
 # Acesse o Swagger para testar as APIs de reserva:
 # Swagger URL: https://localhost:7079/swagger
+
+![image](https://github.com/user-attachments/assets/59c7a62b-65ea-484f-918d-c2abe72958cb)
+![image](https://github.com/user-attachments/assets/e8642ad5-4771-45db-8df0-bdde99d3d0f6)
+![image](https://github.com/user-attachments/assets/09ec7f32-00f3-4c38-bbc1-1eca39188e80)
+
+
+
