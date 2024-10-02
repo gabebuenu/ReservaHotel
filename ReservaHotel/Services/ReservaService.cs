@@ -14,12 +14,12 @@ namespace ReservaHotel.Services
             _reservaRepository = reservaRepository;
         }
 
-        public Reserva CriarReservaPorQuarto(string idQuarto, int idHospede, DateTime data)
+        public Reserva CriarReservaPorQuarto(string idQuarto, string idHospede, DateTime data) // Alterado int para string
         {
             var quarto = _reservaRepository.ObterQuartoPorId(idQuarto);
-            var hospede = _reservaRepository.ObterHospedePorId(idHospede);
+            var hospede = _reservaRepository.ObterHospedePorId(idHospede); // Alterado para string
 
-            var reservaHospedeExistente = _reservaRepository.ObterReservaPorHospedeEData(idHospede, data.Date);
+            var reservaHospedeExistente = _reservaRepository.ObterReservaPorHospedeEData(idHospede, data.Date); // Alterado para string
             if (reservaHospedeExistente != null)
             {
                 EnviarEmail(hospede, false, "O hóspede já tem uma reserva para essa data.");
@@ -50,7 +50,7 @@ namespace ReservaHotel.Services
                 Id = Guid.NewGuid().ToString(),
                 Hospede = hospede,
                 Quarto = quarto,
-                Data = data.Date 
+                Data = data.Date
             };
 
             _reservaRepository.CriarReserva(reserva);
@@ -59,18 +59,16 @@ namespace ReservaHotel.Services
             return reserva;
         }
 
-
-
-        public Reserva CriarReservaPorCategoria(string nomeCategoria, int idHospede, DateTime data)
+        public Reserva CriarReservaPorCategoria(string nomeCategoria, string idHospede, DateTime data) // Alterado int para string
         {
-            var hospede = _reservaRepository.ObterHospedePorId(idHospede);
+            var hospede = _reservaRepository.ObterHospedePorId(idHospede); // Alterado para string
             if (hospede == null || !hospede.Ativo)
             {
                 EnviarEmail(hospede, false, "Hóspede inativo ou inexistente.");
                 throw new Exception("Hóspede inativo ou inexistente.");
             }
 
-            var reservaHospedeExistente = _reservaRepository.ObterReservaPorHospedeEData(idHospede, data.Date);
+            var reservaHospedeExistente = _reservaRepository.ObterReservaPorHospedeEData(idHospede, data.Date); // Alterado para string
             if (reservaHospedeExistente != null)
             {
                 EnviarEmail(hospede, false, "O hóspede já tem uma reserva para essa data.");
@@ -96,17 +94,14 @@ namespace ReservaHotel.Services
                 Id = Guid.NewGuid().ToString(),
                 Hospede = hospede,
                 Quarto = quarto,
-                Data = data.Date 
+                Data = data.Date
             };
 
             _reservaRepository.CriarReserva(reserva);
 
-
             EnviarEmail(hospede, true, "Reserva criada com sucesso.");
             return reserva;
         }
-
-
 
         private void EnviarEmail(Hospede hospede, bool sucesso, string mensagem)
         {
@@ -128,7 +123,7 @@ namespace ReservaHotel.Services
                     using (var smtp = new SmtpClient())
                     {
                         smtp.DeliveryMethod = SmtpDeliveryMethod.SpecifiedPickupDirectory;
-                        smtp.PickupDirectoryLocation = emailDirectory; 
+                        smtp.PickupDirectoryLocation = emailDirectory;
                         smtp.Send(email);
                     }
                 }

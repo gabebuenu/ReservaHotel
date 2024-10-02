@@ -1,0 +1,11 @@
+X-Sender: no-reply@hotel.com
+X-Receiver: joao@example.com
+MIME-Version: 1.0
+From: no-reply@hotel.com
+To: joao@example.com
+Date: 2 Oct 2024 16:40:31 -0300
+Subject: Erro na Reserva
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+TyBow7NzcGVkZSBqw6EgdGVtIHVtYSByZXNlcnZhIHBhcmEgZXNzYSBkYXRhLg==

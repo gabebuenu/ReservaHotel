@@ -2,7 +2,7 @@
 {
     public class ReservaDto
     {
-        public int HospedeId { get; set; }
+        public string HospedeId { get; set; }
         public DateTime Data { get; set; }
     }
 }

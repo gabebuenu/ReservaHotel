@@ -18,14 +18,14 @@ namespace ReservaHotel.Repositories.Data
                 logger.LogInformation("Iniciando seed de hóspedes.");
                 var hospedes = new List<Hospede>
                 {
-                    new Hospede { Id = 1, Nome = "João", Email = "joao@example.com", Ativo = true },
-                    new Hospede { Id = 2, Nome = "Maria", Email = "maria@example.com", Ativo = true },
-                    new Hospede { Id = 3, Nome = "Bruno Bueno", Email = "brunobueno@example.com", Ativo = true },
-                    new Hospede { Id = 4, Nome = "Caio Coneglian", Email = "caioconeglian@example.com", Ativo = true },
-                    new Hospede { Id = 5, Nome = "Claudinei", Email = "claudinei@example.com", Ativo = true },
-                    new Hospede { Id = 6, Nome = "Ettore", Email = "ettore@example.com", Ativo = true },
-                    new Hospede { Id = 7, Nome = "Gustavo Barbosa", Email = "gustavo@example.com", Ativo = true },
-                    new Hospede { Id = 8, Nome = "Gabriel Bueno", Email = "gabrielbueno@example.com", Ativo = true }
+                    new Hospede { Id = "1", Nome = "João", Email = "joao@example.com", Ativo = true },
+                    new Hospede { Id = "2", Nome = "Maria", Email = "maria@example.com", Ativo = true },
+                    new Hospede { Id = "3", Nome = "Bruno Bueno", Email = "brunobueno@example.com", Ativo = true },
+                    new Hospede { Id = "4", Nome = "Caio Coneglian", Email = "caioconeglian@example.com", Ativo = true },
+                    new Hospede { Id = "5", Nome = "Claudinei", Email = "claudinei@example.com", Ativo = true },
+                    new Hospede { Id = "6", Nome = "Ettore", Email = "ettore@example.com", Ativo = true },
+                    new Hospede { Id = "7", Nome = "Gustavo Barbosa", Email = "gustavo@example.com", Ativo = true },
+                    new Hospede { Id = "8", Nome = "Gabriel Bueno", Email = "gabrielbueno@example.com", Ativo = true }
                 };
 
                 foreach (var hospede in hospedes)

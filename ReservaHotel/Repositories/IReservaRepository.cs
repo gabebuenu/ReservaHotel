@@ -7,8 +7,8 @@ namespace ReservaHotel.Repositories
         Reserva CriarReserva(Reserva reserva);
         Quarto ObterQuartoDisponivelPorCategoria(string categoria);
         Quarto ObterQuartoPorId(string idQuarto);
-        Hospede ObterHospedePorId(int idHospede);
+        Hospede ObterHospedePorId(string idHospede);
         Reserva ObterReservaPorQuartoEData(string idQuarto, DateTime data);
-        Reserva ObterReservaPorHospedeEData(int idHospede, DateTime data);
+        Reserva ObterReservaPorHospedeEData(string idHospede, DateTime data);
     }
 }

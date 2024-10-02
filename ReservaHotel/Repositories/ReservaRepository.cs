@@ -29,15 +29,17 @@ namespace ReservaHotel.Repositories
             return _context.Quartos.FirstOrDefault(q => q.Id == idQuarto);
         }
 
-        public Hospede ObterHospedePorId(int idHospede)
+        public Hospede ObterHospedePorId(string idHospede)
         {
             return _context.Hospedes.FirstOrDefault(h => h.Id == idHospede);
         }
-        public Reserva ObterReservaPorQuartoEData(string idQuarto, DateTime data) 
+
+        public Reserva ObterReservaPorQuartoEData(string idQuarto, DateTime data)
         {
             return _context.Reservas.FirstOrDefault(r => r.Quarto.Id == idQuarto && r.Data == data);
         }
-        public Reserva ObterReservaPorHospedeEData(int idHospede, DateTime data)
+
+        public Reserva ObterReservaPorHospedeEData(string idHospede, DateTime data)
         {
             return _context.Reservas.FirstOrDefault(r => r.Hospede.Id == idHospede && r.Data == data);
         }

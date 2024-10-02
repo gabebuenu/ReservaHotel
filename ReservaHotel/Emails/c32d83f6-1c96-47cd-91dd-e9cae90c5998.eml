@@ -1,0 +1,11 @@
+X-Sender: no-reply@hotel.com
+X-Receiver: joao@example.com
+MIME-Version: 1.0
+From: no-reply@hotel.com
+To: joao@example.com
+Date: 2 Oct 2024 16:40:14 -0300
+Subject: Reserva Confirmada
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+
+Reserva criada com sucesso.

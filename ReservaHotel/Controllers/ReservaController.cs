@@ -2,7 +2,6 @@
 using ReservaHotel.Services;
 using ReservaHotel.DTO;
 
-
 namespace ReservaHotel.Controllers
 {
     [ApiController]
@@ -21,7 +20,7 @@ namespace ReservaHotel.Controllers
         {
             try
             {
-                var reserva = _reservaService.CriarReservaPorQuarto(idQuarto, reservaDto.HospedeId, reservaDto.Data);
+                var reserva = _reservaService.CriarReservaPorQuarto(idQuarto, reservaDto.HospedeId, reservaDto.Data);  // HospedeId agora é string
                 return Ok(reserva);
             }
             catch (Exception ex)
@@ -47,7 +46,7 @@ namespace ReservaHotel.Controllers
         {
             try
             {
-                var reserva = _reservaService.CriarReservaPorCategoria(nomeCategoria, reservaDto.HospedeId, reservaDto.Data);
+                var reserva = _reservaService.CriarReservaPorCategoria(nomeCategoria, reservaDto.HospedeId, reservaDto.Data);  // HospedeId agora é string
                 return Ok(reserva);
             }
             catch (Exception ex)
